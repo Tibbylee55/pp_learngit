@@ -56,11 +56,50 @@ str1 = "My deliverable is due in May"
 str1_list1 = str1.split ()
 str1_list2 = str1.split ( " " , 2 )
 print("Output #21: {0}".format ( str1_list1 ) )
-print("Output #22: FIRST PIECE:{0} SECOND PIECE:{1} THIRD PIECE:{2}".format ( str1_list2[0]\
-                                                                            , str1_list2[1]\
+print("Output #22: FIRST PIECE:{0} SECOND PIECE:{1} THIRD PIECE:{2}".format ( str1_list2[0]
+                                                                            , str1_list2[1]
                                                                             , str1_list2[2]) )
 str2 = "Your,delivery,is,due,in,June"
 str2_list = str2.split(',')
 print("Output #23:{0}".format ( str2_list ) )
-print("Output #24:{0}{1}{2}".format(str2_list[1],str2_list[5],\
+print("Output #24:{0}{1}{2}".format(str2_list[1],str2_list[5],
                                     str2_list[-1]))
+
+# 2017年11月23日
+# join
+print("Output #25:{0}".format(','.join(str2_list))) #表示使用，将字符串链接起来
+
+# strip 删除字符串两端的空格( )、制表符（\t）、换行符(\n)
+string3 = "  Remove unwanted characters   from this string.\t\t    \n"
+print("Output #26: string3: {0:s}".format(string3))
+string3_lstrip = string3.lstrip()
+print("Output #27: lstrip: {0:s}".format(string3_lstrip))
+string3_rstrip = string3.rstrip()
+print("Output #28: rstrip: {0:s}".format(string3_rstrip))
+string3_strip = string3.strip()
+print("Output #29: strip: {0:s}".format(string3_strip))
+
+# strip删除字符串两端的其他字符
+string4 = "$$Here's another string that has unwanted characters.__++----"
+print("Output #30: {0:s}".format(string4))
+string4_strip = string4.strip('$_+-')
+print("Output #31: {0:s}".format(string4_strip))
+
+# replace
+string5 = "Let's replace the space in this sentence with other characters."
+string5_replace = string5.replace(" ","!@!")
+print("Output #32: {0:s}".format(string5_replace))
+string5_replace = string5.replace(" ",",")
+print("Output #33: {0:s}".format(string5_replace))
+
+# lower upper capitalize
+string6 = "Here's WHAT Happens WHEN You Use lower."
+print("Output #34: {0:s}".format(string6.lower()))
+string7 = "Here's what Happens when You Use UPPER."
+print("Output #35: {0:s}".format(string7.upper()))
+string8 = "here's WHAT Happens WHEN you use Capitalize."
+print("Output #36: {0:s}".format(string8.capitalize()))
+string8_list = string8.split()
+print("Output #37(on each word): ")
+for word in string8_list:
+    print("{0:s}".format(word.capitalize()))
